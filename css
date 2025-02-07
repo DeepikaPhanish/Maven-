@@ -1,16 +1,14 @@
 myapp/
-│
-├── pom.xml
-│
+├── pom.xml                 # Maven configuration file
 ├── src/
 │   ├── main/
-│   │   ├── java/
+│   │   ├── java/           # Your Java source code
 │   │   │   └── com/
 │   │   │       └── example/
 │   │   │           └── MyApp.java
-│   │   ├── resources/
-│   │   │   └── application.properties
-│   │   └── webapp/
+│   │   ├── resources/      # Configuration files (e.g., application.properties)
+│   │   └── webapp/         # Web resources for .war packaging
 │   │       └── WEB-INF/
-│   │           ├── web.xml
-│   │           └── ...
+│   │           └── web.xml
+│   └── test/               # Test code
+└── target/                 # Output directory (contains the generated .war file)
