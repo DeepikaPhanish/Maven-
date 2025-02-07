@@ -7,39 +7,42 @@
     <groupId>com.example</groupId>
     <artifactId>myapp</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>war</packaging> <!-- This ensures the output is a WAR file -->
 
+    <!-- Properties -->
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <!-- Dependencies -->
     <dependencies>
-        <!-- Add your dependencies here, for example: -->
-        <!-- Spring Boot Example -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- JSP example -->
+        <!-- Servlet API dependency for web applications -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
-            <scope>provided</scope>
+            <scope>provided</scope> <!-- 'provided' means the servlet container provides it -->
+        </dependency>
+        
+        <!-- Example of Spring Boot starter (optional, depending on your setup) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
 
+    <!-- Build configuration -->
     <build>
         <plugins>
-            <!-- Maven WAR Plugin to package the application as a WAR file -->
+            <!-- Maven WAR plugin to handle WAR packaging -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.1</version>
                 <configuration>
                     <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                    <!-- Optional: customize the WAR file -->
+                    <!-- Optional: customize web resources -->
                     <webResources>
                         <resource>
                             <directory>src/main/resources</directory>
