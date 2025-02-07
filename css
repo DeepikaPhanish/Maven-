@@ -1,0 +1,16 @@
+myapp/
+│
+├── pom.xml
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── MyApp.java
+│   │   ├── resources/
+│   │   │   └── application.properties
+│   │   └── webapp/
+│   │       └── WEB-INF/
+│   │           ├── web.xml
+│   │           └── ...
